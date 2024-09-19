@@ -94,10 +94,10 @@ export default function Home() {
         </div>
 
         {/* Section with About Us and Border Box */}
-        <div className='grid grid-cols-1 md:grid-cols-2 justify-center items-center bg-gray-100  md:p-10'>
+        <div className='grid grid-cols-2 bg-gray-100 p-10'>
           {/* LEFT */}
-          <div className='min-h-screen flex flex-col gap-20 bg-gray-100 p-10 md:p-20'>
-            <div className='flex items-center relative mt-10 ml-10 md:mt-0 md:ml-0'>
+          <div className='min-h-screen flex flex-col gap-20 bg-gray-100 p-20'>
+            <div className='flex items-center relative'>
               <div className='border-4 border-primary w-16 h-16 absolute -left-5 z-0' />
               <span className='text-5xl font-title1 bg-gray-100 z-10 pl-3 relative'>
                 About Us
@@ -119,25 +119,25 @@ export default function Home() {
                 Complete Interior Concepts
               </span>
             </div>
-            <div className='w-full'>
-              <div className=' bottom-0 grid grid-cols-3 gap-2 bg-gray-100 rounded-t-xl p-2 text-black shadow-xl z-5'>
-                <div className='w-full flex flex-col justify-center itemns-center text-center border-[5px] border-black border-opacity-5 rounded-xl p-2'>
-                  <span className='text-xl font-semibold'>300+</span>
+            <div>
+              <div className='w-[100%] bottom-0 flex justify-evenly bg-gray-100 rounded-t-xl p-10 text-black shadow-2xl z-5'>
+                <div className='w-[30%] flex flex-col justify-center itemns-center border-[5px] border-black border-opacity-5 rounded-xl p-5'>
+                  <span className='text-2xl font-semibold'>300+</span>
                   <span>Project</span>
                 </div>
-                <div className='w-full flex flex-col justify-center itemns-center text-center border-[5px] border-black border-opacity-5 rounded-xl p-2'>
-                  <span className='text-xl font-semibold'>1000+</span>
+                <div className='w-[30%] flex flex-col justify-center itemns-center border-[5px] border-black border-opacity-5 rounded-xl p-5'>
+                  <span className='text-2xl font-semibold'>1000+</span>
                   <span>Clients</span>
                 </div>
-                <div className='w-full flex flex-col justify-center itemns-center text-center border-[5px] border-black border-opacity-5 rounded-xl p-2'>
-                  <span className='text-xl font-semibold'>1000+</span>
-                  <span>Styles</span>
+                <div className='w-[30%] flex flex-col justify-center itemns-center border-[5px] border-black border-opacity-5 rounded-xl p-5'>
+                  <span className='text-2xl font-semibold'>1000+</span>
+                  <span>Styles Unik</span>
                 </div>
               </div>
             </div>
           </div>
           {/* RIGHT */}
-          <div className='hidden  relative md:flex items-start p-10'>
+          <div className='relative flex items-start p-10'>
             <div className='border-l-2 border-t-2 border-primary p-5'>
               <Image src={item1} alt='item1' className='shadow-xl w-[350px]' />
             </div>
@@ -153,31 +153,31 @@ export default function Home() {
           <div className='w-full absolute bg-primary h-1 z-5'></div>
 
           {/* Elemen-elemen yang akan dihubungkan */}
-          <div className='bg-white rounded-full p-6 w-14 h-14 md:w-20 md:h-20 flex items-center justify-center shadow-xl border-t-2 border-b-2 border-primary z-10'>
+          <div className='bg-white rounded-full p-6 w-20 h-20 flex items-center justify-center shadow-xl border-t-2 border-b-2 border-primary z-10'>
             <span>
               <i className='fa-solid fa-compass-drafting'></i>
             </span>
           </div>
 
-          <div className='bg-white rounded-full p-6 w-14 h-14 md:w-20 md:h-20 flex items-center justify-center shadow-xl border-t-2 border-b-2 border-primary z-10'>
+          <div className='bg-white rounded-full p-6 w-20 h-20 flex items-center justify-center shadow-xl border-t-2 border-b-2 border-primary z-10'>
             <span>
               <i className='fa-solid fa-user-tie'></i>
             </span>
           </div>
 
-          <div className='bg-white rounded-full p-6 w-14 h-14 md:w-20 md:h-20 flex items-center justify-center shadow-xl border-t-2 border-b-2 border-primary z-10'>
+          <div className='bg-white rounded-full p-6 w-20 h-20 flex items-center justify-center shadow-xl border-t-2 border-b-2 border-primary z-10'>
             <span>
               <i className='fa-solid fa-cubes-stacked'></i>
             </span>
           </div>
 
-          <div className='bg-white rounded-full p-6 w-14 h-14 md:w-20 md:h-20 flex items-center justify-center shadow-xl border-t-2 border-b-2 border-primary z-10'>
+          <div className='bg-white rounded-full p-6 w-20 h-20 flex items-center justify-center shadow-xl border-t-2 border-b-2 border-primary z-10'>
             <span>
               <i className='fa-brands fa-unity'></i>
             </span>
           </div>
 
-          <div className='bg-white rounded-full p-6 w-14 h-14 md:w-20 md:h-20 flex items-center justify-center shadow-xl border-t-2 border-b-2 border-primary z-10'>
+          <div className='bg-white rounded-full p-6 w-20 h-20 flex items-center justify-center shadow-xl border-t-2 border-b-2 border-primary z-10'>
             <span>
               <i className='fa-solid fa-percent'></i>
             </span>
@@ -199,18 +199,18 @@ export default function Home() {
             </div>
           </div>
           {/* itemset 1 */}
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+          <div className='flex justify-center gap-5'>
             {products.map((product) => (
               <motion.section
                 key={product.id}
-                className='relative w-full h-[50vh] md:w-[450px] md:h-[450px] overflow-hidden group'
+                className='relative w-[500px] h-[500px] overflow-hidden group'
                 whileHover='hover'
               >
                 {/* Gambar yang memicu hover */}
                 <img
                   src={product.imageUrl[0]} // Using the first image from product's image array
                   alt={product.name}
-                  className='object-cover w-full h-full transition-transform duration-300 group-hover:scale-110'
+                  className='object-cover transition-transform duration-300 group-hover:scale-105'
                 />
                 <motion.div className='absolute h-full w-full top-0 left-0 p-4 text-white flex flex-col justify-between z-20'>
                   <span className='text-2xl font-bold'>BEST</span>
@@ -237,6 +237,127 @@ export default function Home() {
                 </motion.div>
               </motion.section>
             ))}
+            <motion.section
+              className='relative w-[500px] h-[500px] overflow-hidden group'
+              whileHover='hover'
+            >
+              {/* Gambar yang memicu hover */}
+              <Image
+                src={item1}
+                alt='item'
+                fill
+                className='object-cover transition-transform duration-300 group-hover:scale-105'
+              />
+              <motion.div className='absolute h-full w-full top-0 left-0 p-4 text-white flex flex-col justify-between z-20'>
+                <span className='text-2xl font-bold'>BEST</span>
+                <div className='flex flex-col'>
+                  <div className='flex gap-5 items-center'>
+                    <span className='text-2xl font-bold'>
+                      <i className='fa-solid fa-couch'></i>
+                    </span>
+                    <span>CHAIR</span>
+                  </div>
+                  <span className='text-2xl font-bold'>ENTERTAINMENT</span>
+                </div>
+              </motion.div>
+              {/* Overlay yang berubah tinggi saat hover */}
+              <motion.div
+                className='absolute top-0 left-0 w-full h-[0%] bg-black bg-opacity-50 flex items-center justify-center overflow-hidden'
+                variants={heightHover}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+              >
+                <div className='p-5 text-white text-center'>
+                  <span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Consectetur porro, voluptas maxime est laboriosam harum
+                    praesentium fuga vero voluptatum! Rem dolorum culpa omnis
+                    alias repudiandae ea, distinctio animi suscipit nisi.
+                  </span>
+                </div>
+              </motion.div>
+            </motion.section>
+          </div>
+
+          {/* itemset 2 */}
+          <div className='flex justify-center gap-5'>
+            <motion.section
+              className='relative w-[500px] h-[500px] overflow-hidden group'
+              whileHover='hover'
+            >
+              {/* Gambar yang memicu hover */}
+              <Image
+                src={item1}
+                alt='item'
+                fill
+                className='object-cover transition-transform duration-300 group-hover:scale-105'
+              />
+              <motion.div className='absolute h-full w-full top-0 left-0 p-4 text-white flex flex-col justify-between z-20'>
+                <span className='text-2xl font-bold'>BEST</span>
+                <div className='flex flex-col'>
+                  <div className='flex gap-5 items-center'>
+                    <span className='text-2xl font-bold'>
+                      <i className='fa-solid fa-couch'></i>
+                    </span>
+                    <span>CHAIR</span>
+                  </div>
+                  <span className='text-2xl font-bold'>ENTERTAINMENT</span>
+                </div>
+              </motion.div>
+              {/* Overlay yang berubah tinggi saat hover */}
+              <motion.div
+                className='absolute top-0 left-0 w-full h-[0%] bg-black bg-opacity-50 flex items-center justify-center overflow-hidden'
+                variants={heightHover}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+              >
+                <div className='p-5 text-white text-center'>
+                  <span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Consectetur porro, voluptas maxime est laboriosam harum
+                    praesentium fuga vero voluptatum! Rem dolorum culpa omnis
+                    alias repudiandae ea, distinctio animi suscipit nisi.
+                  </span>
+                </div>
+              </motion.div>
+            </motion.section>
+            <motion.section
+              className='relative w-[500px] h-[500px] overflow-hidden group'
+              whileHover='hover'
+            >
+              {/* Gambar yang memicu hover */}
+              <Image
+                src={item1}
+                alt='item'
+                fill
+                className='object-cover transition-transform duration-300 group-hover:scale-105'
+              />
+              <motion.div className='absolute h-full w-full top-0 left-0 p-4 text-white flex flex-col justify-between z-20'>
+                <span className='text-2xl font-bold'>BEST</span>
+                <div className='flex flex-col'>
+                  <div className='flex gap-5 items-center'>
+                    <span className='text-2xl font-bold'>
+                      <i className='fa-solid fa-couch'></i>
+                    </span>
+                    <span>CHAIR</span>
+                  </div>
+                  <span className='text-2xl font-bold'>ENTERTAINMENT</span>
+                </div>
+              </motion.div>
+              {/* Overlay yang berubah tinggi saat hover */}
+              <motion.div
+                className='absolute top-0 left-0 w-full h-[0%] bg-black bg-opacity-50 flex items-center justify-center overflow-hidden'
+                variants={heightHover}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+              >
+                <div className='p-5 text-white text-center'>
+                  <span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Consectetur porro, voluptas maxime est laboriosam harum
+                    praesentium fuga vero voluptatum! Rem dolorum culpa omnis
+                    alias repudiandae ea, distinctio animi suscipit nisi.
+                  </span>
+                </div>
+              </motion.div>
+            </motion.section>
           </div>
         </div>
 

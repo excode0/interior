@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Header from '../components/header';
-import { products, Product } from './data/productData';
+import { products, Product } from '../data/productData';
 import item1 from '../assets/images/item_1.jpg';
 import item4 from '../assets/images/item_4.jpg';
 // item promo

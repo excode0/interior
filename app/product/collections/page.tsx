@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Header from '../../components/header';
-import { products, Product } from '../data/productData';
+import { products, Product } from '../../data/productData';
 import Image from 'next/image';
 
 const Page = () => {
