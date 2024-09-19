@@ -1,8 +1,6 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Header from '../components/header';
-import { products, Product } from '../data/productData';
-import item1 from '../assets/images/item_1.jpg';
 import item4 from '../assets/images/item_4.jpg';
 // item promo
 import item7 from '../assets/images/item_7.jpg';
@@ -22,42 +20,42 @@ import Image from 'next/image';
 import Footer from '../components/footer';
 
 const Page = () => {
-  const [filterType, setFilterType] = useState('all'); // Property type filter
-  const [filterPrice, setFilterPrice] = useState('all'); // Price range filter
-  const [filterColor, setFilterColor] = useState('all'); // Color filter
+  // const [filterType, setFilterType] = useState('all'); // Property type filter
+  // const [filterPrice, setFilterPrice] = useState('all'); // Price range filter
+  // const [filterColor, setFilterColor] = useState('all'); // Color filter
 
-  // Handle filter changes
-  const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setFilterType(event.target.value);
-  };
+  // // Handle filter changes
+  // const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  //   setFilterType(event.target.value);
+  // };
 
-  const handlePriceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setFilterPrice(event.target.value);
-  };
+  // const handlePriceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  //   setFilterPrice(event.target.value);
+  // };
 
-  const handleColorChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setFilterColor(event.target.value);
-  };
+  // const handleColorChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  //   setFilterColor(event.target.value);
+  // };
 
   // Filter the products array based on selected criteria
-  const filteredProducts = products.filter((product) => {
-    // Filter by property type
-    const typeMatch =
-      filterType === 'all' || product.category.toLowerCase() === filterType;
+  // const filteredProducts = products.filter((product) => {
+  //   // Filter by property type
+  //   const typeMatch =
+  //     filterType === 'all' || product.category.toLowerCase() === filterType;
 
-    // Filter by price range
-    let priceMatch = true;
-    if (filterPrice === 'low') priceMatch = product.price <= 500;
-    else if (filterPrice === 'medium')
-      priceMatch = product.price > 500 && product.price <= 1000;
-    else if (filterPrice === 'high') priceMatch = product.price > 1000;
+  //   // Filter by price range
+  //   let priceMatch = true;
+  //   if (filterPrice === 'low') priceMatch = product.price <= 500;
+  //   else if (filterPrice === 'medium')
+  //     priceMatch = product.price > 500 && product.price <= 1000;
+  //   else if (filterPrice === 'high') priceMatch = product.price > 1000;
 
-    // Filter by color
-    const colorMatch =
-      filterColor === 'all' || product.colors.includes(filterColor);
+  //   // Filter by color
+  //   const colorMatch =
+  //     filterColor === 'all' || product.colors.includes(filterColor);
 
-    return typeMatch && priceMatch && colorMatch;
-  });
+  //   return typeMatch && priceMatch && colorMatch;
+  // });
 
   return (
     <div className='min-h-screen flex flex-col'>
@@ -250,8 +248,8 @@ const Page = () => {
             PRODUCT BRAND IN INTERIOR
           </span>
           <span className=''>
-            Produk kami terus berkembang dan menyesuaikan zamannya "kami tak
-            lekang oleh waktu tak lapuk pula dek hujan" begitulah kami,
+            Produk kami terus berkembang dan menyesuaikan zamannya &quot;kami
+            tak lekang oleh waktu tak lapuk pula dek hujan&quot; begitulah kami,
             produk-produk kami sudah dijamin oleh pak itam yaitu tukang buat web
             ini cuy
           </span>

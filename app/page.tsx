@@ -5,12 +5,7 @@ import item1 from './assets/images/item_1.jpg';
 import item2 from './assets/images/item_2.jpg';
 import bankBni from './assets/images/bank/bni.png';
 
-import {
-  motion,
-  useAnimation,
-  useAnimationFrame,
-  useMotionValue,
-} from 'framer-motion';
+import { motion, useAnimationFrame, useMotionValue } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Header from './components/header';
 import { products } from './data/dataDummy';
@@ -84,7 +79,7 @@ export default function Home() {
           <div className='absolute w-full h-screen flex flex-col justify-center items-center p-10'>
             <div className='flex flex-col justify-center items-center gap-5'>
               <span className='text-[5em] font-bold text-white font-title'>
-                LET'S DESIGN YOUR DREAM
+                LET{"'"}S DESIGN YOUR DREAM
               </span>
               <span className='border-4 border-primary rounded-lg text-xl text-textThird font-semibold hover:bg-primary  hover:scale-110 duration-150 cursor-pointer p-2'>
                 ORDER NOW

@@ -1,8 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Header from '../../components/header';
-import { products, Product } from '../../data/productData';
-import Image from 'next/image';
+import { products, Product } from '../../data/dataDummy';
 
 const Page = () => {
   const [filterType, setFilterType] = useState('all'); // Property type filter
@@ -104,8 +103,8 @@ const Page = () => {
                   className='w-full h-[500px] flex flex-col border-2 p-4 rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-2xl'
                 >
                   <div className='h-[250px] w-full overflow-hidden'>
-                    <Image
-                      src={product.imageUrl}
+                    <img
+                      src={product.imageUrl[0]}
                       alt={product.name}
                       className='object-cover w-full h-full'
                     />

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import Head from 'next/head';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -31,6 +30,7 @@ export default function RootLayout({
         <script
           src='https://kit.fontawesome.com/3b6740b8ef.js'
           crossOrigin='anonymous'
+          async
         ></script>
       </head>
       <body
